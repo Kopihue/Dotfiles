@@ -1,0 +1,85 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 5,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "memory",
+        "clock",
+        "wireplumber"
+    ],
+
+    "modules-right": [
+        "battery",
+        "network"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "<span size='larger'>{icon}</span>",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "\uf444",
+            "default": "\uf4c3"
+        },
+        "icon-size": 10,
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        }
+    },
+    "clock": {
+        "format": "{:%d.%m.%Y | %H:%M}"
+    },
+    "wireplumber": {
+        "format": " | <span color='#81A1C1'>\udb81\udcc3</span> {volume}%",
+        "format-muted": "| <span color='#81A1C1'>\udb81\udcc4</span> 0%",
+        "max-volume": 100,
+        "scroll-step": 5
+    },
+    "battery": {
+        "bat": "BAT1",
+        "interval": 60,
+        "format": "<span color='#A3BE8C'>{icon}</span> {capacity}%",
+        "format-icons": [
+            "\udb80\udc7b",
+            "\udb80\udc7d",
+            "\udb80\udc7f",
+            "\udb80\udc81",
+            "\udb80\udc79"
+        ]
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "<span color='#81A1C1'>\uefc5</span>  {used:0.1f}G | "
+    },
+    "network": {
+        "format": "",
+        "format-ethernet": "\udb83\udc9d",
+        "format-wifi": "<span color='#88C0D0'>{icon}</span>  {essid}",
+        "format-disconnected": "\udb82\udd2b",
+        "format-icons": [
+            "\udb82\udd2f",
+            "\udb82\udd1f",
+            "\udb82\udd22",
+            "\udb82\udd25",
+            "\udb82\udd28"
+        ],
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected"
+    }
+}

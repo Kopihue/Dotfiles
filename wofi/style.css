@@ -1,0 +1,60 @@
+window {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 18px;
+    background-color: rgba(10, 10, 10, 0.7);
+    border: 2px solid rgba(80, 100, 255, 0.4);
+    border-radius: 14px;
+    color: #e6e6e6;
+    padding: 10px;
+}
+
+/* Caja de búsqueda (sin borde azul) */
+#input {
+    margin: 6px;
+    margin-bottom: 13px;
+    border-radius: 10px;
+    padding: 6px 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(30, 30, 30, 0.6);
+    color: #fff;
+    box-shadow: none;
+}
+
+/* Evita borde azul al enfocar */
+#input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+#inner-box {
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 10px;
+    padding: 5px;
+    background-color: transparent;
+}
+
+#entry {
+    padding: 6px 10px;
+    border-radius: 8px;
+    color: #cccccc;
+}
+
+#entry:selected {
+    background-color: rgba(80, 100, 255, 0.25);
+    color: #ffffff;
+}
+
+#text {
+    margin-left: 8px;
+}
+
+#img {
+    margin-right: 6px;
+    border-radius: 6px;
+}
+

@@ -1,0 +1,14 @@
+[window]
+padding.x = 15
+padding.y = 15
+opacity = 0.5
+
+[font]
+normal.family = "Lilex"
+normal.style = "Medium"
+
+size = 30
+
+[colors]
+primary.background = "#000000"
+
