@@ -41,7 +41,8 @@
         }
     },
     "clock": {
-        "format": "{:%d.%m.%Y | %H:%M}"
+        "format": "{:%d.%m.%Y | %H:%M}",
+	"tooltip-format": "{:%A}"
     },
     "wireplumber": {
         "format": " | <span color='#81A1C1'>\udb81\udcc3</span> {volume}%",
@@ -78,8 +79,12 @@
             "\udb82\udd25",
             "\udb82\udd28"
         ],
-        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-wifi": "{ipaddr}",
         "tooltip-format-ethernet": "{ifname}",
         "tooltip-format-disconnected": "Disconnected"
+    },
+    "custom/ip": {
+	"format": "{}",
+	"exec": "ip -brief a | tail -n 1 | awk '{print $3}' | tr '/' ' ' | awk '{print $1}'"
     }
 }

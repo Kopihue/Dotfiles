@@ -7,7 +7,7 @@ opacity = 0.5
 normal.family = "Lilex"
 normal.style = "Medium"
 
-size = 30
+size = 26
 
 [colors]
 primary.background = "#000000"

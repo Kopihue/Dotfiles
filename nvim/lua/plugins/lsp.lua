@@ -10,6 +10,7 @@ return {
 	    "jsonls",
 	    "vimls",
 	    "rust_analyzer",
+	    "bashls",
 	}
 
 	for _, language in ipairs(languages) do
