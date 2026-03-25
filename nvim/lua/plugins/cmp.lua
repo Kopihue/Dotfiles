@@ -1,20 +1,20 @@
-return {
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-	"hrsh7th/cmp-nvim-lsp",
-    },
-    config = function()
-	local cmp = require("cmp")
+require("kuky").install(
+    'saghen/blink.cmp',
+    function()
+	require("blink.cmp").setup({
+	    keymap = {
+		preset = "super-tab",
+	    },
 
-	cmp.setup({
-	    mapping = cmp.mapping.preset.insert({
-		["<CR>"] = cmp.mapping.confirm({ select = true }),
-		["<C-Space>"] = cmp.mapping.complete(),
-	    }),
-
-	    sources = cmp.config.sources({
-		{ name = "nvim_lsp" }, -- sugerencias desde LSP
-	    }),
+	    completion = {
+		documentation = {
+		    auto_show = true,
+		    auto_show_delay_ms = 10,
+		}
+	    }
 	})
-    end
-}
+    end,
+    {
+	'rafamadriz/friendly-snippets'
+    }
+)

@@ -1,6 +1,6 @@
-return {
+require("kuky").install(
     "neovim/nvim-lspconfig",
-    config = function()
+    function()
 	local languages = {
 	    "lua_ls",
 	    "pyright",
@@ -16,5 +16,10 @@ return {
 	for _, language in ipairs(languages) do
 	    vim.lsp.enable(language)
 	end
-    end,
-}
+
+	vim.diagnostic.config({
+	    underline = false,
+	    signs = true,
+	})
+    end
+)

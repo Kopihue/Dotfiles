@@ -1,5 +1,10 @@
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.shiftwidth = 4
-vim.opt.guicursor = ""
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.cursorline = true
+vim.o.shiftwidth = 4
+vim.o.confirm = true
+vim.o.termguicolors = true
+vim.o.guicursor = ""
 vim.o.laststatus = 0

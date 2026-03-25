@@ -1,21 +1,19 @@
--- functions definitions
-local auto_center_buffer_vision = function() 
-    vim.cmd("normal! zz")
-end
+vim.api.nvim_create_autocmd('UIEnter', {
+  callback = function()
+    vim.o.clipboard = 'unnamedplus'
+  end,
+})
 
-local alert_when_yanked = function()
-    if vim.v.event.regname == "+" then
-	print("Copiado")
-    end
-end
-
--- functions activations
 vim.api.nvim_create_autocmd("CursorMoved", {
-    callback = auto_center_buffer_vision,
+    callback = function()
+	vim.cmd("normal! zz")
+    end
 })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-    callback = alert_when_yanked,
+    callback = function()
+	vim.notify("Copied.")
+    end
 })
 
 -- disable lsp syntax highlighting
@@ -27,3 +25,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end
     end,
 })
+
+-- Plugins tests

@@ -1,9 +1,8 @@
-return {
-    'nvim-treesitter/nvim-treesitter',
-    lazy = false,
-    build = ':TSUpdate',
-    config = function()
+require("kuky").install(
+    "nvim-treesitter/nvim-treesitter",
+    function()
 	local ts = require("nvim-treesitter")
+
 	local parsers = {
 	    "rust",
 	    "python",
@@ -36,4 +35,4 @@ return {
 	    end,
 	})
     end
-}
+)
